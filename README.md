@@ -14,4 +14,4 @@ mvn spring-boot:run
 原型版本列表：
 
 - v0.1.0 初始版本，最基本的 Application 和首页访问 http://localhost:8080
-- v0.2.0 实现单独的 restful api 示例, http://localhost:8080/users
+- v0.2.3 实现单独的 restful api 示例, http://localhost:8080/users
