@@ -16,3 +16,5 @@ mvn spring-boot:run
 - v0.1.0 初始版本，最基本的 Application 和首页访问 http://localhost:8080
 - v0.2.4 实现单独的 restful api 示例, http://localhost:8080/users
 - v0.3.0 实现最基本的 MyBatis 集成示例, controller+repository，http://localhost:8080/users
+- v0.4.0 实现了标准的 MyBatis 集成示例，controller+service+repository+entity, http://localhost:8080/users http://localhost:8080/users/:id
+

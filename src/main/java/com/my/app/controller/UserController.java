@@ -3,21 +3,28 @@ package com.my.app.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+// import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.my.app.repository.UserRepository;
+import com.my.app.entity.User;
+import com.my.app.service.UserService;
 
 @RestController
-@EnableAutoConfiguration
+// @EnableAutoConfiguration
+@RequestMapping("/users")
 public class UserController {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserService userService;
 
-    @GetMapping("/users")
-    public List<?> listUsers() {
-        return userRepository.getAll();
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @GetMapping
+    public List<User> listUsers() {
+        return userService.getAllUsers();
     }
 }
