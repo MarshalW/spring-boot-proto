@@ -13,4 +13,4 @@ mvn spring-boot:run
 
 原型版本列表：
 
-- v0.1.0 
+- v0.1.0 初始版本，最基本的 Application 和首页访问
